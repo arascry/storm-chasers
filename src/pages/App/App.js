@@ -3,9 +3,6 @@ import './App.css';
 
 import { Switch, Route } from 'react-router-dom';
 
-import NavBar from '../../components/NavBar/NavBar';
-import Footer from '../../components/Footer/Footer';
-
 import Landing from '../../pages/Landing/Landing';
 import Login from '../../pages/Login/Login';
 import Dashboard from '../../pages/Dashboard/Dashboard';
@@ -18,7 +15,6 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <NavBar />
         <Switch>
           <Route path='/login'>
             <Login />
@@ -30,7 +26,6 @@ class App extends React.Component {
             <Landing />
           </Route>
         </Switch>
-        <Footer />
       </div>
     );
   }
