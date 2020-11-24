@@ -1,8 +1,9 @@
 import { useRef, useCallback, useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
+import MarkerInfo from "../MarkerInfo/MarkerInfo";
 
 import "mapbox-gl/dist/mapbox-gl.css";
-import "./Map.css"
+import "./Map.css";
 import Bolt from "../Bolt/mapBolt.svg";
 import "./Map.css";
 
@@ -35,9 +36,9 @@ function Map() {
   }, []);
 
   return (
-    <div className='Map'>
+    <div className="Map">
       <ReactMapGL
-        className="map"
+        className="react-map"
         {...viewport}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle="mapbox://styles/jacklmbrt07/ckhvi5y8y0ek119ml4lm1tebr"
@@ -51,8 +52,8 @@ function Map() {
             key={marker.time.toISOString()}
             latitude={marker.latitude}
             longitude={marker.longitude}
-            offsetLeft={0} //make it center of where you click //-20, -10
-            offsetTop={0}
+            offsetLeft={-20} //make it center of where you click //-20, -10
+            offsetTop={-10}
             data={markers}
           >
             <img
@@ -68,9 +69,11 @@ function Map() {
         {selected ? (
           <div>Storm Spotted! {`${selected.time}`} </div>
         ) : (
-            <div>Click a Storm to see details.</div>
-          )}
+          <div>Click a Storm to see details.</div>
+        )}
       </ReactMapGL>
+
+      <MarkerInfo data={selected ? selected : ""} />
     </div>
   );
 }

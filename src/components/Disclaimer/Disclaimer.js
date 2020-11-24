@@ -7,7 +7,7 @@ const Disclaimer = ({ handleEnterClick }) => {
     return (
         <div className='Disclaimer-Container'>
             <div>
-                <img id='title' src={disclaimerText} />
+                <img id='title' src={disclaimerText} alt="disclaimer"/>
                 <p id='subtext'>TWI⚡TER MAY CAUSE TOO MUCH FUN.</p>
             </div>
             <button onClick={() => handleEnterClick()}>
