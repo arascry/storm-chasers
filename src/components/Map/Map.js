@@ -1,28 +1,50 @@
-import React from 'react';
+import React from "react";
 
-import { useState } from 'react';
-import ReactMapGL from 'react-map-gl';
+import { useState } from "react";
+import ReactMapGL, { Marker } from "react-map-gl";
 
-import 'mapbox-gl/dist/mapbox-gl.css';
-
-const TOKEN = 'pk.eyJ1IjoibWlua2Fyb24iLCJhIjoiY2todjZydnM5MTBtMTJybWFpdGo3empqcSJ9.GJcZVdMWlq4VTsjCy_zQQA';
+import "mapbox-gl/dist/mapbox-gl.css";
 
 function Map() {
   const [viewport, setViewport] = useState({
-    width: '50vw',
-    height: '50vh',
+    width: "70vw",
+    height: "70vh",
     latitude: 37.7577,
     longitude: -122.4376,
-    zoom: 8
+    zoom: 8,
   });
 
+  const [markers, setMarkers] = useState([]);
+
   return (
-    <ReactMapGL
-      {...viewport}
-      onViewportChange={nextViewport => setViewport(nextViewport)}
-      mapStyle="mapbox://styles/mapbox/streets-v11"
-      mapboxApiAccessToken={TOKEN}
-    />
+    <div>
+      <ReactMapGL
+        {...viewport}
+        onViewportChange={(nextViewport) => setViewport(nextViewport)}
+        mapStyle="mapbox://styles/jacklmbrt07/ckhvi5y8y0ek119ml4lm1tebr"
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+        onClick={(event) => {
+          setMarkers((current) => [
+            ...current,
+            {
+              latitude: event.lngLat[1], // this is wrong, this function is for google maps not react-map-gl
+              longitude: event.lngLat[0], /// this is wrong
+              time: new Date(),
+            },
+          ]);
+        }}
+      >
+        {markers.map((marker) => (
+          <Marker
+            key={marker.time.toISOString()}
+            latitude={marker.latitude}
+            longitude={marker.longitude}
+            offsetLeft={-20} //make it center of where you click
+            offsetTop={-10}
+          />
+        ))}
+      </ReactMapGL>
+    </div>
   );
 }
 
