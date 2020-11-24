@@ -9,8 +9,8 @@ import "./Map.css";
 
 function Map() {
   const [viewport, setViewport] = useState({
-    width: 1000,
-    height: 600,
+    width: 1500,
+    height: 500,
     latitude: 37.7577,
     longitude: -122.4376,
     zoom: 8,
@@ -69,8 +69,8 @@ function Map() {
         {selected ? (
           <div>Storm Spotted! {`${selected.time}`} </div>
         ) : (
-          <div>Click a Storm to see details.</div>
-        )}
+            <div>Click a Storm to see details.</div>
+          )}
       </ReactMapGL>
 
       <MarkerInfo data={selected ? selected : ""} />
