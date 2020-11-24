@@ -1,13 +1,14 @@
 import React from "react";
 import { Table } from "react-bootstrap";
+import './Dashboard.css'
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Dashboard = (props) => {
   return (
-    <div>
+    <div className="dashboard" >
       Dashboard
-      <div className="table">
-        <Table bordered hover size="sm">
+        <Table bordered hover size="sm" className="table w-75 mx-auto white">
           <thead>
             <tr>
               <th>Name</th>
@@ -33,7 +34,6 @@ const Dashboard = (props) => {
             </tr>
           </tbody>
         </Table>
-      </div>
     </div>
   );
 };

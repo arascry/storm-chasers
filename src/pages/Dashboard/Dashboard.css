@@ -1,4 +1,13 @@
-.table {
-    
-    width: 75%;
+.dashboard {
+  background-color: #373351;
+  height: 100%;
+  color: white;
 }
+
+Table {
+  background-color: white;
+  *border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
