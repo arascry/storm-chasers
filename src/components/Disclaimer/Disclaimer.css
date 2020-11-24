@@ -10,6 +10,10 @@
     box-shadow: 0 3000px rgba(0, 0, 0, 0.4) inset;
 }
 
+img {
+    width: 37px;
+}
+
 .Disclaimer-Container > div {
     margin: 0 auto;
 }

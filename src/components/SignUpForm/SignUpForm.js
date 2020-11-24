@@ -20,13 +20,13 @@ const SignUpForm = () => {
                 <br />
                 <p>ALERT ME ABOUT...</p>
                 <input type='checkbox' />
-                <label>  Tornados within 25 miles</label>
+                <label>&nbsp;&nbsp;Tornados within 25 miles</label>
                 <br />
                 <input type='checkbox' />
-                <label>  Tornados within 100 miles</label>
+                <label>&nbsp;&nbsp;Tornados within 100 miles</label>
                 <br />
                 <input type='checkbox' />
-                <label>%nsbp%Tornados within the U.S.</label>
+                <label>&nbsp;&nbsp;Tornados within the U.S.</label>
                 <br />
                 <br />
                 <input id='sign-up' type='submit' value='Sign Up' />
