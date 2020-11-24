@@ -9,7 +9,6 @@ const SignUpForm = () => {
                 <br />
                 <br />
                 <p>STAY UPDATED</p>
-                <br />
                 <input type='text' id='account' placeholder='User Name' />
                 <br />
                 <br />
@@ -21,15 +20,13 @@ const SignUpForm = () => {
                 <br />
                 <p>ALERT ME ABOUT...</p>
                 <input type='checkbox' />
-                <label>Tornados within 25 miles</label>
-                <br />
-                <br />
-                <input type='checkbox' />
-                <label>Tornados within 100 miles</label>
-                <br />
+                <label>&nbsp;&nbsp;Tornados within 25 miles</label>
                 <br />
                 <input type='checkbox' />
-                <label>Tornados within the U.S.</label>
+                <label>&nbsp;&nbsp;Tornados within 100 miles</label>
+                <br />
+                <input type='checkbox' />
+                <label>&nbsp;&nbsp;Tornados within the U.S.</label>
                 <br />
                 <br />
                 <input id='sign-up' type='submit' value='Sign Up' />
