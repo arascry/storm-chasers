@@ -2,13 +2,14 @@ import { useRef, useCallback, useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
+import "./Map.css"
 import Bolt from "../Bolt/mapBolt.svg";
 import "./Map.css";
 
 function Map() {
   const [viewport, setViewport] = useState({
-    width: "70vw",
-    height: "70vh",
+    width: 1000,
+    height: 600,
     latitude: 37.7577,
     longitude: -122.4376,
     zoom: 8,
@@ -34,7 +35,7 @@ function Map() {
   }, []);
 
   return (
-    <div className="map-container">
+    <div className='Map'>
       <ReactMapGL
         className="map"
         {...viewport}

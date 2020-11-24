@@ -1,32 +1,5 @@
-.map-container {
-    display: flex;
-    padding: 5px 50px 50px 25px;
-}
-
-.map {
-    border: solid black 1px;
-}
-
-.marker {
-
-}
-
-.details-container {
-    padding-left: 10px;
-}
-
-.details {
-
-}
-
-.detail-header {
-
-}
-
-#time {
-
-}
-
-#location {
-
+.Map {
+    max-width: 1000px;
+    margin-left: 80px;
+    margin-right: 0px;
 }

@@ -1,15 +1,14 @@
 import React from 'react';
 
 import './Disclaimer.css';
+import disclaimerText from './disclaimer.png';
 
 const Disclaimer = ({ handleEnterClick }) => {
     return (
         <div className='Disclaimer-Container'>
             <div>
-                <h1>DISCLAIMER</h1>
-            </div>
-            <div>
-                TWI⚡TER MAY CAUSE TOO MUCH FUN.
+                <img id='title' src={disclaimerText} />
+                <p id='subtext'>TWI⚡TER MAY CAUSE TOO MUCH FUN.</p>
             </div>
             <button onClick={() => handleEnterClick()}>
                 ENTER
