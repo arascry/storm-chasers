@@ -11,9 +11,9 @@ function Map() {
   const [viewport, setViewport] = useState({
     width: 1500,
     height: 500,
-    latitude: 37.7577,
-    longitude: -122.4376,
-    zoom: 8,
+    latitude: 36.502778,
+    longitude: -96.733611,
+    zoom: 5,
   });
 
   const [markers, setMarkers] = useState([]);
