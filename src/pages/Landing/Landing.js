@@ -24,8 +24,10 @@ export default class Landing extends React.Component {
                 {this.state.disclaimerAccepted ?
                     (<div className='Landing-Container'>
                         <NavBar />
-                        <h1>Landing Page</h1>
-                        <Map />
+                            <div className="content-container">
+                                <h1 className="header">Landing Page</h1>
+                                <Map />
+                            </div>
                         <Footer />
                     </div>) :
                     (<Disclaimer

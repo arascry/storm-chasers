@@ -3,6 +3,7 @@ import ReactMapGL, { Marker } from "react-map-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import Bolt from "../Bolt/mapBolt.svg";
+import "./Map.css";
 
 function Map() {
   const [viewport, setViewport] = useState({
@@ -33,8 +34,9 @@ function Map() {
   }, []);
 
   return (
-    <div>
+    <div className="map-container">
       <ReactMapGL
+        className="map"
         {...viewport}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle="mapbox://styles/jacklmbrt07/ckhvi5y8y0ek119ml4lm1tebr"
@@ -44,6 +46,7 @@ function Map() {
       >
         {markers.map((marker) => (
           <Marker
+            className="marker"
             key={marker.time.toISOString()}
             latitude={marker.latitude}
             longitude={marker.longitude}
@@ -61,13 +64,37 @@ function Map() {
             />
           </Marker>
         ))}
-
         {selected ? (
           <div>Storm Spotted! {`${selected.time}`} </div>
         ) : (
           <div>Click a Storm to see details.</div>
         )}
       </ReactMapGL>
+      <div className="details-container">
+        {selected ? (
+          <div className="details">
+            <p className="detail-header">Username: </p>
+            <p className="detail-header">
+              Time: <span id="time">{`${selected.time}`}</span>
+            </p>
+            <p className="detail-header">
+              Location:{" "}
+              <span id="location">{`${selected.longitude}, ${selected.latitude}`}</span>
+            </p>
+          </div>
+        ) : (
+          <div className="details">
+            <p className="detail-header">Username: </p>
+            <p className="detail-header">Time: </p>
+            <p className="detail-header">Location: </p>
+          </div>
+        )}
+        <div>
+          <p>
+            hello
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
