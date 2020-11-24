@@ -4,11 +4,12 @@ import { useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
+import './Map.css';
 
 function Map() {
   const [viewport, setViewport] = useState({
-    width: "70vw",
-    height: "70vh",
+    width: 500,
+    height: 400,
     latitude: 37.7577,
     longitude: -122.4376,
     zoom: 8,
@@ -17,7 +18,7 @@ function Map() {
   const [markers, setMarkers] = useState([]);
 
   return (
-    <div>
+    <div className='Map'>
       <ReactMapGL
         {...viewport}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
