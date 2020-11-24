@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Login = (props) => {
+const Sighting = (props) => {
     return (
         <div>
-            Login Page
+            Sighting
         </div>
     )
 }
 
-export default Login;
+export default Sighting;
