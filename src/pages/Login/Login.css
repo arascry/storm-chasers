@@ -1,6 +1,12 @@
-.Login-Container {
+.Form-Container {
     background-image: url('./hyamy0.jpg');
     height: 100%;
     background-size: cover;
     background-position: 0px 900px;
+}
+
+.Signup-Container {
+    background: rgba(255, 255, 255, .4);
+    width: 55%;
+    margin: 0 auto;
 }
