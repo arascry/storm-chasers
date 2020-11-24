@@ -6,9 +6,15 @@
     justify-content: center;
 }
 
+p {
+    font-size: 40px;
+    color: black;
+}
+
 label {
     font-family: Helvetica, sans-serif;
     font-size: 20px;
+    color: black;
 }
 
 #account {

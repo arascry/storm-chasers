@@ -1,5 +1,5 @@
 .Marker-Info {
-    width: 22%;
+    width: 30vw;
     margin: 0px 10px;
     text-align: left;
     align-items: baseline;
@@ -15,4 +15,12 @@ p {
 #info {
     font-family: Helvetica, sans-serif;
     font-size: 20px;
+}
+
+#props-date {
+    font-size: 40px;
+}
+
+#props-lng-lat {
+    font-size: 40px;
 }
