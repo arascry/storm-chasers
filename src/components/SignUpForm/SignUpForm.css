@@ -1,5 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
 .Sign-Up-Fields {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+label {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#account {
+    font-family: 'Libre Baskerville', sans-serif;
+    color: grey;
+    border: none;
+    font-size: 14px;
+    width: 450px;
+    height: 40px;
+}
+
+#sign-up {
+    background-color: #FF6644;
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
+    color: white;
+    font-size: 32px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 7%;
+    margin-left: 140px;
 }

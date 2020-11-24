@@ -1,15 +1,40 @@
 import React from 'react';
 
+import './SignUpForm.css';
+
 const SignUpForm = () => {
     return (
         <div className='Sign-Up-Fields'>
-            <p>STAY UPDATED</p>
             <form>
-                <textarea value='username' placeholder='User Name'></textarea>
                 <br />
-                <textarea value='location' placeholder='City, State'></textarea>
                 <br />
-                <textarea value='email' placeholder='Email Address'></textarea>
+                <p>STAY UPDATED</p>
+                <br />
+                <input type='text' id='account' placeholder='User Name' />
+                <br />
+                <br />
+                <input type='text' id='account' placeholder='City, State' />
+                <br />
+                <br />
+                <input type='text' id='account' placeholder='Email' />
+                <br />
+                <br />
+                <p>ALERT ME ABOUT...</p>
+                <input type='checkbox' />
+                <label>Tornados within 25 miles</label>
+                <br />
+                <br />
+                <input type='checkbox' />
+                <label>Tornados within 100 miles</label>
+                <br />
+                <br />
+                <input type='checkbox' />
+                <label>Tornados within the U.S.</label>
+                <br />
+                <br />
+                <input id='sign-up' type='submit' value='Sign Up' />
+                <br />
+                <br />
             </form>
         </div>
     )
