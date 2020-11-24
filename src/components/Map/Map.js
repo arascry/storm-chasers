@@ -27,8 +27,8 @@ function Map() {
           setMarkers((current) => [
             ...current,
             {
-              latitude: 37.7577, // this is wrong, this function is for google maps not react-map-gl
-              longitude: -122.4376, /// this is wrong
+              latitude: event.lngLat[1], // this is wrong, this function is for google maps not react-map-gl
+              longitude: event.lngLat[0], /// this is wrong
               time: new Date(),
             },
           ]);
