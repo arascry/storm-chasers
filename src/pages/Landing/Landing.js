@@ -25,7 +25,7 @@ export default class Landing extends React.Component {
                 {this.state.disclaimerAccepted ?
                     (<div className='Landing-Container'>
                         <NavBar />
-                        <p id='title'>STORM CHASE</p>
+                        <p id='Landing-Title'>STORM CHASE</p>
                         <div className='Map-Container'>
                             <Map />
                             <MarkerInfo />

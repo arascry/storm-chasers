@@ -68,34 +68,9 @@ function Map() {
         {selected ? (
           <div>Storm Spotted! {`${selected.time}`} </div>
         ) : (
-          <div>Click a Storm to see details.</div>
-        )}
+            <div>Click a Storm to see details.</div>
+          )}
       </ReactMapGL>
-      <div className="details-container">
-        {selected ? (
-          <div className="details">
-            <p className="detail-header">Username: </p>
-            <p className="detail-header">
-              Time: <span id="time">{`${selected.time}`}</span>
-            </p>
-            <p className="detail-header">
-              Location:{" "}
-              <span id="location">{`${selected.longitude}, ${selected.latitude}`}</span>
-            </p>
-          </div>
-        ) : (
-          <div className="details">
-            <p className="detail-header">Username: </p>
-            <p className="detail-header">Time: </p>
-            <p className="detail-header">Location: </p>
-          </div>
-        )}
-        <div>
-          <p>
-            hello
-          </p>
-        </div>
-      </div>
     </div>
   );
 }
