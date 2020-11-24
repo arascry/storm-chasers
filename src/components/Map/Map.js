@@ -38,7 +38,7 @@ function Map() {
   return (
     <div className="Map">
       <ReactMapGL
-        className="map"
+        className="react-map"
         {...viewport}
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle="mapbox://styles/jacklmbrt07/ckhvi5y8y0ek119ml4lm1tebr"
