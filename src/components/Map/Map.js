@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useState } from "react";
 import ReactMapGL, { Marker } from "react-map-gl";
 
 import "mapbox-gl/dist/mapbox-gl.css";
+import Bolt from "../Bolt/mapBolt.svg";
 
 function Map() {
   const [viewport, setViewport] = useState({
@@ -15,6 +16,10 @@ function Map() {
   });
 
   const [markers, setMarkers] = useState([]);
+
+  useEffect(() => {
+    function handleMarkerAdd() {}
+  });
 
   return (
     <div>
@@ -41,7 +46,9 @@ function Map() {
             longitude={marker.longitude}
             offsetLeft={-20} //make it center of where you click
             offsetTop={-10}
-          />
+          >
+            <img src={Bolt} alt="mapBolt" width="42px" />
+          </Marker>
         ))}
       </ReactMapGL>
     </div>
