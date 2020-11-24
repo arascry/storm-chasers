@@ -1,9 +1,10 @@
 import React from 'react';
 
+import './LoginForm.css';
 
 const LoginForm = () => {
     return (
-        <div>
+        <div className='Form-Container'>
             Login In Form
         </div>
     )
