@@ -1,35 +1,19 @@
 import React from 'react';
-
-import Map from '../../components/Map/Map';
 import './App.css';
+
+import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      isMarkerShown: false
-    }
-  }
-
-  componentDidMount() {
-    this.delayedShowMarker()
-  }
-
-  delayedShowMarker = () => {
-    setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
-
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
   }
 
   render() {
     return (
       <div className='App'>
-        <Map />
+        <NavBar />
+        <Footer />
       </div>
     );
   }
