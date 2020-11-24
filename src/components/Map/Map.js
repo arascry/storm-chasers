@@ -14,6 +14,7 @@ function Map() {
   });
 
   const [markers, setMarkers] = useState([]);
+  const [selected, setSelected] = useState(null);
 
   const onMapClick = useCallback((event) => {
     setMarkers((current) => [
@@ -46,13 +47,26 @@ function Map() {
             key={marker.time.toISOString()}
             latitude={marker.latitude}
             longitude={marker.longitude}
-            offsetLeft={-20} //make it center of where you click
-            offsetTop={-10}
+            offsetLeft={0} //make it center of where you click //-20, -10
+            offsetTop={0}
             data={markers}
           >
-            <img src={Bolt} alt="mapBolt" width="42px" />
+            <img
+              src={Bolt}
+              alt="mapBolt"
+              width="42px"
+              onClick={() => {
+                setSelected(marker);
+              }}
+            />
           </Marker>
         ))}
+
+        {selected ? (
+          <div>Storm Spotted! {`${selected.time}`} </div>
+        ) : (
+          <div>Click a Storm to see details.</div>
+        )}
       </ReactMapGL>
     </div>
   );
