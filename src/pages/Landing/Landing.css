@@ -2,3 +2,14 @@
     height: 100%;
     text-align: center;
 }
+
+#title {
+    font-size: 90px;
+    margin: 10px 0px 0px 0px;
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
+}
+
+.Map-Container {
+    display: flex;
+    flex-wrap: wrap;
+}
