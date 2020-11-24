@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.NavBar-Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 95px;
+    font-size: 32px;
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
+    color: #FF6644;
+    background-color: #373351;
+}
+
+.NavBar-Empty {
+    flex-grow: .8;
+}
+
+a:link {
+    color: #FF6644;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FF6644;
+    text-decoration: none;
+}
